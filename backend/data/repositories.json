@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1233,
+    "github_repo_id": 947631233,
+    "name": "frontend",
+    "full_name": "arzoosingh147/frontend",
+    "owner": "arzoosingh147",
+    "is_private": false,
+    "default_branch": "main",
+    "indexing_status": "INDEXING",
+    "last_indexed_at": null,
+    "rules": {
+      "max_function_lines": 50,
+      "forbidden_libraries": [
+        "pickle",
+        "eval",
+        "os.system"
+      ],
+      "require_typed_returns": true,
+      "security_audit": "high",
+      "enforce_jwt_rotation": true
+    },
+    "created_at": "2026-11-27T19:14:06.850361",
+    "updated_at": "2026-11-27T19:14:09.353132"
+  },
+  {
+    "id": 3307,
+    "github_repo_id": 1452333307,
+    "name": "CodeIt",
+    "full_name": "tjiuce/CodeIt",
+    "owner": "tjiuce",
+    "is_private": false,
+    "default_branch": "main",
+    "indexing_status": "INDEXING",
+    "last_indexed_at": null,
+    "rules": {
+      "max_function_lines": 50,
+      "forbidden_libraries": [
+        "pickle",
+        "eval",
+        "os.system"
+      ],
+      "require_typed_returns": true,
+      "security_audit": "high",
+      "enforce_jwt_rotation": true
+    },
+    "created_at": "2026-11-27T17:55:07.888606",
+    "updated_at": "2026-11-27T17:55:12.088546"
+  },
+  {
+    "id": 2982,
+    "github_repo_id": 1646462982,
+    "name": "visual-ds",
+    "full_name": "arzoosingh147/visual-ds",
+    "owner": "arzoosingh147",
+    "is_private": false,
+    "default_branch": "main",
+    "indexing_status": "INDEXING",
+    "last_indexed_at": null,
+    "rules": {
+      "max_function_lines": 50,
+      "forbidden_libraries": [
+        "pickle",
+        "eval",
+        "os.system"
+      ],
+      "require_typed_returns": true,
+      "security_audit": "high",
+      "enforce_jwt_rotation": true
+    },
+    "created_at": "2026-11-27T17:38:00.561789",
+    "updated_at": "2026-11-27T17:38:06.504966"
+  },
+  {
+    "id": 1366,
+    "github_repo_id": 3497821366,
+    "name": "projectecofy",
+    "full_name": "arzoosingh147/projectecofy",
+    "owner": "arzoosingh147",
+    "is_private": false,
+    "default_branch": "main",
+    "indexing_status": "INDEXING",
+    "last_indexed_at": null,
+    "rules": {
+      "max_function_lines": 50,
+      "forbidden_libraries": [
+        "pickle",
+        "eval",
+        "exec",
+        "os.system"
+      ],
+      "detect_hardcoded_secrets": true,
+      "prevent_sql_injection": true,
+      "forbid_blocking_sync_calls": true,
+      "detect_n_plus_one": true,
+      "require_typed_returns": true,
+      "enforce_layered_architecture": true,
+      "forbid_raw_any_types": true,
+      "security_audit_level": "high"
+    },
+    "created_at": "2026-11-27T16:36:09.897598",
+    "updated_at": "2026-11-27T17:37:22.790640"
+  }
+]

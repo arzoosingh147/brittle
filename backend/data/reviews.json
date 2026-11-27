@@ -1,0 +1,214 @@
+[
+  {
+    "id": 291,
+    "repository_id": 1,
+    "pr_number": 12,
+    "head_sha": "d9202e42161a712f7422d65a3fef64325c1880df",
+    "base_sha": "02c50749e378cddbbc9e69134e7077f45d87e2dd",
+    "title": "feat(auth): add OAuth2 refresh token rotation and session caching #12",
+    "author": "octocat",
+    "state": "COMPLETED",
+    "summary": "Automated Brittle AI multi-agent code review passed for PR #12.\nSecurity agent detected an unescaped SQL statement. Performance agent flagged synchronous I/O. Quality agent verified architectural consistency.",
+    "risk_score": 6,
+    "recommendation": "REQUEST_CHANGES",
+    "security_issues_count": 1,
+    "perf_issues_count": 1,
+    "quality_issues_count": 1,
+    "comments": [
+      {
+        "id": 1,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 42,
+        "side": "RIGHT",
+        "agent_name": "security",
+        "severity": "HIGH",
+        "title": "Unescaped SQL query in token comparison",
+        "comment": "Direct string interpolation permits SQL injection vulnerabilities. Use parameterized queries with SQLAlchemy bind parameters.",
+        "suggestion": "stmt = select(Token).where(Token.hashed_value == token_param)\nresult = await db.execute(stmt)"
+      },
+      {
+        "id": 2,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 68,
+        "side": "RIGHT",
+        "agent_name": "performance",
+        "severity": "MEDIUM",
+        "title": "Blocking synchronous Redis call in async route",
+        "comment": "Synchronous redis.set() blocks the asyncio event loop for concurrent clients. Use await aioredis.set().",
+        "suggestion": "await redis_client.set(f'session:{user_id}', token, ex=3600)"
+      },
+      {
+        "id": 3,
+        "file_path": "src/models/session.py",
+        "line_number": 15,
+        "side": "RIGHT",
+        "agent_name": "quality",
+        "severity": "LOW",
+        "title": "Missing return type annotation",
+        "comment": "Repository guidelines require explicit static type hints on all public service methods.",
+        "suggestion": "def get_session_info(self) -> Dict[str, Any]:"
+      }
+    ],
+    "created_at": "2026-11-27T19:14:23.661339",
+    "updated_at": "2026-11-27T19:14:23.661363"
+  },
+  {
+    "id": 316,
+    "repository_id": 1,
+    "pr_number": 36,
+    "head_sha": "d6f0855393b61fda7a3ac2f77fb7df4b3831a754",
+    "base_sha": "06ccd9e5827d91f0b4dbaab8d3260eb2a42ae562",
+    "title": "feat(auth): add OAuth2 refresh token rotation and session caching #36",
+    "author": "octocat",
+    "state": "COMPLETED",
+    "summary": "Automated Brittle AI multi-agent code review passed for PR #36.\nSecurity agent detected an unescaped SQL statement. Performance agent flagged synchronous I/O. Quality agent verified architectural consistency.",
+    "risk_score": 6,
+    "recommendation": "REQUEST_CHANGES",
+    "security_issues_count": 1,
+    "perf_issues_count": 1,
+    "quality_issues_count": 1,
+    "comments": [
+      {
+        "id": 1,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 42,
+        "side": "RIGHT",
+        "agent_name": "security",
+        "severity": "HIGH",
+        "title": "Unescaped SQL query in token comparison",
+        "comment": "Direct string interpolation permits SQL injection vulnerabilities. Use parameterized queries with SQLAlchemy bind parameters.",
+        "suggestion": "stmt = select(Token).where(Token.hashed_value == token_param)\nresult = await db.execute(stmt)"
+      },
+      {
+        "id": 2,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 68,
+        "side": "RIGHT",
+        "agent_name": "performance",
+        "severity": "MEDIUM",
+        "title": "Blocking synchronous Redis call in async route",
+        "comment": "Synchronous redis.set() blocks the asyncio event loop for concurrent clients. Use await aioredis.set().",
+        "suggestion": "await redis_client.set(f'session:{user_id}', token, ex=3600)"
+      },
+      {
+        "id": 3,
+        "file_path": "src/models/session.py",
+        "line_number": 15,
+        "side": "RIGHT",
+        "agent_name": "quality",
+        "severity": "LOW",
+        "title": "Missing return type annotation",
+        "comment": "Repository guidelines require explicit static type hints on all public service methods.",
+        "suggestion": "def get_session_info(self) -> Dict[str, Any]:"
+      }
+    ],
+    "created_at": "2026-11-27T17:56:00.168794",
+    "updated_at": "2026-11-27T17:56:00.168819"
+  },
+  {
+    "id": 989,
+    "repository_id": 1,
+    "pr_number": 91,
+    "head_sha": "031ca6fdef930415e908de3b6d0a2d02e4c13953",
+    "base_sha": "0d39a1ec39bc488476c6bf36febdc736d09e4f05",
+    "title": "feat(auth): add OAuth2 refresh token rotation and session caching #91",
+    "author": "octocat",
+    "state": "COMPLETED",
+    "summary": "Automated Brittle AI multi-agent code review passed for PR #91.\nSecurity agent detected an unescaped SQL statement. Performance agent flagged synchronous I/O. Quality agent verified architectural consistency.",
+    "risk_score": 6,
+    "recommendation": "REQUEST_CHANGES",
+    "security_issues_count": 1,
+    "perf_issues_count": 1,
+    "quality_issues_count": 1,
+    "comments": [
+      {
+        "id": 1,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 42,
+        "side": "RIGHT",
+        "agent_name": "security",
+        "severity": "HIGH",
+        "title": "Unescaped SQL query in token comparison",
+        "comment": "Direct string interpolation permits SQL injection vulnerabilities. Use parameterized queries with SQLAlchemy bind parameters.",
+        "suggestion": "stmt = select(Token).where(Token.hashed_value == token_param)\nresult = await db.execute(stmt)"
+      },
+      {
+        "id": 2,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 68,
+        "side": "RIGHT",
+        "agent_name": "performance",
+        "severity": "MEDIUM",
+        "title": "Blocking synchronous Redis call in async route",
+        "comment": "Synchronous redis.set() blocks the asyncio event loop for concurrent clients. Use await aioredis.set().",
+        "suggestion": "await redis_client.set(f'session:{user_id}', token, ex=3600)"
+      },
+      {
+        "id": 3,
+        "file_path": "src/models/session.py",
+        "line_number": 15,
+        "side": "RIGHT",
+        "agent_name": "quality",
+        "severity": "LOW",
+        "title": "Missing return type annotation",
+        "comment": "Repository guidelines require explicit static type hints on all public service methods.",
+        "suggestion": "def get_session_info(self) -> Dict[str, Any]:"
+      }
+    ],
+    "created_at": "2026-11-27T17:55:53.535795",
+    "updated_at": "2026-11-27T17:55:53.535823"
+  },
+  {
+    "id": 323,
+    "repository_id": 1,
+    "pr_number": 21,
+    "head_sha": "f72d744d73d583929dd8eb91a1e85364d3a2ce1d",
+    "base_sha": "e9e879f83e38d089548a9524f31f578df7cae075",
+    "title": "feat(auth): add OAuth2 refresh token rotation and session caching #21",
+    "author": "octocat",
+    "state": "COMPLETED",
+    "summary": "Automated Brittle AI multi-agent code review passed for PR #21.\nSecurity agent detected an unescaped SQL statement. Performance agent flagged synchronous I/O. Quality agent verified architectural consistency.",
+    "risk_score": 6,
+    "recommendation": "REQUEST_CHANGES",
+    "security_issues_count": 1,
+    "perf_issues_count": 1,
+    "quality_issues_count": 1,
+    "comments": [
+      {
+        "id": 1,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 42,
+        "side": "RIGHT",
+        "agent_name": "security",
+        "severity": "HIGH",
+        "title": "Unescaped SQL query in token comparison",
+        "comment": "Direct string interpolation permits SQL injection vulnerabilities. Use parameterized queries with SQLAlchemy bind parameters.",
+        "suggestion": "stmt = select(Token).where(Token.hashed_value == token_param)\nresult = await db.execute(stmt)"
+      },
+      {
+        "id": 2,
+        "file_path": "src/auth/token_service.py",
+        "line_number": 68,
+        "side": "RIGHT",
+        "agent_name": "performance",
+        "severity": "MEDIUM",
+        "title": "Blocking synchronous Redis call in async route",
+        "comment": "Synchronous redis.set() blocks the asyncio event loop for concurrent clients. Use await aioredis.set().",
+        "suggestion": "await redis_client.set(f'session:{user_id}', token, ex=3600)"
+      },
+      {
+        "id": 3,
+        "file_path": "src/models/session.py",
+        "line_number": 15,
+        "side": "RIGHT",
+        "agent_name": "quality",
+        "severity": "LOW",
+        "title": "Missing return type annotation",
+        "comment": "Repository guidelines require explicit static type hints on all public service methods.",
+        "suggestion": "def get_session_info(self) -> Dict[str, Any]:"
+      }
+    ],
+    "created_at": "2026-11-27T16:37:58.558196",
+    "updated_at": "2026-11-27T16:37:58.558217"
+  }
+]
